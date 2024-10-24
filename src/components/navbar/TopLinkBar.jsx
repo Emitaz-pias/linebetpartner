@@ -26,15 +26,18 @@ const topBarData = [
 
 const TopLinkBar = () => {
     return (
-        <Box sx={{ display: 'flex', justifyContent: 'space-evenly' }}>
-            {topBarData.map((bar, index) => (
-                <Box key={index} display="flex" justifyContent='center'sx={{ color: '#62ca84' }}>                   
-                    <Box sx={{ width: '24px', height: '24px', svg: { fill: '#62ca84' }, mr: 1 }}>
-                        <bar.image />
-                    </Box>                    
-                    <Box fontSize='small'>{bar.name}</Box>
-                </Box>
-            ))}
+        <Box sx={{ paddingX: { md:13 }, paddingTop:{md:'0.2em'},display: { md: 'block', lg: 'block', xs: 'none' } }} >
+            <Box sx={{ display: 'flex', justifyContent: 'space-evenly' }}>
+                {topBarData.map((bar, index) => (
+                    <Box key={index} display="flex" justifyContent='center' sx={{ color: '#62ca84' }}>
+                        <Box fontSize={{ md: '0.5em' }} sx={{ width: '24px', height: '24px', svg: { fill: '#62ca84' }, mr: 1 }}>
+                            <bar.image />
+                        </Box>
+                        <Box fontSize={{ md: '0.7em' }}>{bar.name}</Box>
+                    </Box>
+                ))}
+            </Box>
+
         </Box>
     );
 };

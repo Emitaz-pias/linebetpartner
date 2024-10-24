@@ -1,0 +1,27 @@
+/* Style for all navigation buttons */
+.nav-button {
+    font-size: 0.7rem !important; /* Smaller font size */
+    color: grey !important;         /* Text color set to grey */
+    text-transform: none; /* Disable uppercase transformation */
+    margin-right: 1rem; 
+    font-weight: bold !important; /* Add space between buttons */
+   
+  }
+  
+  /* Hover effect for navigation buttons */
+  .nav-button:hover {
+    color: #00b846 !important;
+    background-color: white !important; /* Change color to green on hover */
+  }
+  
+  /* Additional style for the Register button */
+  .register-button {
+    font-size: 0.875rem; /* Keep font size consistent */
+    background-color: #00b846; /* Green background for register */
+    color: white;
+  }
+  
+  .register-button:hover {
+    background-color: #028f3a; /* Slightly darker green on hover */
+  }
+  
