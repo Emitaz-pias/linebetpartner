@@ -72,13 +72,13 @@ const Navbar = () => {
     );
 
     return (
-        <Box sx={{ paddingX: { md:23 } }}>
-            <AppBar position="static" sx={{ backgroundColor: 'white', boxShadow: 'none !important', color: 'black !important',}}>
+        <Box sx={{ paddingX: { md:27 } }}>
+            <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none !important', color: 'black !important',}}>
                 <Toolbar>
                     {/* Logo Section */}
-                    <Typography component="div" sx={{ flexGrow: 1 }}>
+                    <Typography component="div" sx={{flexGrow: 1 }}>
                         <Link to="/" style={{ textDecoration: 'none', }}>
-                            <Box component={'img'} src={LogoDark} sx={{ width: '35%' }} alt='logoDark'></Box>
+                            <Box component={'img'} src={LogoDark} sx={{ width: '32%' }} alt='logoDark'></Box>
                         </Link>
                     </Typography>
 

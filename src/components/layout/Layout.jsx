@@ -6,10 +6,11 @@ import Navbar from '../navbar/Navbar';
 
 const Layout = ({ children }) => {
     return (
-        <Box>            
-            <TopLinkBar />            
+        <Box>
+            <TopLinkBar />
             <Divider />
-            <Navbar/>
+            <Navbar />
+           <Box component={'main'} paddingX={{xs:0,sm:0,md:30,lg:30}}>{children}</Box>
         </Box>
 
     );

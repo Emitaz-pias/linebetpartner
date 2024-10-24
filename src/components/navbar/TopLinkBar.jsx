@@ -27,7 +27,7 @@ const topBarData = [
 const TopLinkBar = () => {
     return (
         <Box sx={{ paddingX: { md:13 }, paddingTop:{md:'0.2em'},display: { md: 'block', lg: 'block', xs: 'none' } }} >
-            <Box sx={{ display: 'flex', justifyContent: 'space-evenly' }}>
+            <Box sx={{ display: 'flex', justifyContent: 'space-evenly',flexShrink:2}}>
                 {topBarData.map((bar, index) => (
                     <Box key={index} display="flex" justifyContent='center' sx={{ color: '#62ca84' }}>
                         <Box fontSize={{ md: '0.5em' }} sx={{ width: '24px', height: '24px', svg: { fill: '#62ca84' }, mr: 1 }}>
