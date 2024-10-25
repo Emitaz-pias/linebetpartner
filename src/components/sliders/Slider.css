@@ -1,0 +1,14 @@
+.slick-prev, .slick-next {
+    z-index: 1; /* Ensure arrows are visible */
+    color: black;
+  }
+  
+  .slick-prev:before, .slick-next:before {
+    font-size: 24px;
+    color: grey; /* Change arrow color */
+  }
+  
+  .slick-slide {
+    padding: 10px; /* Add padding between slides */
+  }
+  

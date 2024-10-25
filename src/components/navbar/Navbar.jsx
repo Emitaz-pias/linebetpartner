@@ -72,19 +72,19 @@ const Navbar = () => {
     );
 
     return (
-        <Box sx={{ paddingX: { md:27 } }}>
-            <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none !important', color: 'black !important',}}>
+        <Box sx={{ paddingX: { md:25 } }}>
+            <AppBar position="static" sx={{display:{md:'flex'},textTransform:'none' ,backgroundColor: 'transparent', boxShadow: 'none !important', color: 'black !important',}}>
                 <Toolbar>
                     {/* Logo Section */}
                     <Typography component="div" sx={{flexGrow: 1 }}>
                         <Link to="/" style={{ textDecoration: 'none', }}>
-                            <Box component={'img'} src={LogoDark} sx={{ width: '32%' }} alt='logoDark'></Box>
+                            <Box component={'img'} src={LogoDark} sx={{ width: '36%' }} alt='logoDark'></Box>
                         </Link>
                     </Typography>
 
                     {/* Desktop Menu */}
-                    <Box sx={{ display: { xs: 'none', sm: 'none', lg: 'block', md: 'block' } }}>
-                        <Button className="nav-button" component={Link} to="/what-we-offer">
+                    <Box sx={{ display: { xs: 'none', sm: 'none', lg: 'block', md: 'block', },position:{md:'relative'},right:{md:'5em'} }}>
+                        <Box><Button className="nav-button" component={Link} to="/what-we-offer">
                             What do we offer?
                         </Button>
                         <Button className="nav-button" component={Link} to="/brochure">
@@ -95,9 +95,11 @@ const Navbar = () => {
                         </Button>
                         <Button className="nav-button" component={Link} to="/faq">
                             FAQ
-                        </Button>
-                        <Button className="nav-button" component={Link} to="/faq">
-                            en
+                        </Button></Box>                      
+                    </Box>
+                    <Box sx={{ display: { xs: 'none', sm: 'none', lg: 'block', md: 'block', }}} >
+                       <Button className="nav-button" component={Link} to="/faq">
+                            en ^
                         </Button>
                         <Button className="register-button" variant="contained" sx={{ backgroundColor: '#00b846' }} component={Link} to="/register">
                             Register
@@ -105,8 +107,7 @@ const Navbar = () => {
                         <Button className="nav-button" component={Link} to="/login">
                             Login
                         </Button>
-                       
-                    </Box>
+                       </Box>                       
 
                     {/* Mobile Menu Icon */}
                     <IconButton

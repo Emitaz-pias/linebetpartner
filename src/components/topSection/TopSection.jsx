@@ -3,7 +3,7 @@ import React from 'react';
 import firstScreenVideo from '../../images/first-screen-video.mp4';
 const TopSection = () => {
     return (
-        <Box sx={{position:'relative',height: { xs: '100vh', sm: '100vh', md: '40vh', lg: '40vh',},overflow:'hidden',borderRadius:'1.5em'}}>
+        <Box border='1px solid red' sx={{position:'relative',height: { xs: '100vh', sm: '100vh', md: '50vh', lg: '50vh',},overflow:'hidden',borderRadius:{md:'2em'}}}>
           <Box
         component="video"
         autoPlay
@@ -16,9 +16,8 @@ const TopSection = () => {
           left: 0,
           objectFit:'cover',
           width:'100%',
-          height: '100%',         
-          zIndex: -1,
-          
+          height:{xs:'100vh', md:'100vh'},         
+          zIndex: -1,                   
         }}
       >
         <source src={firstScreenVideo} type="video/mp4" />
@@ -30,15 +29,16 @@ const TopSection = () => {
         sx={{
           position: 'relative',
           zIndex: 1, // Ensures the navbar stays above the video
-          color: '#fff', // Adjust color for contrast on the video background
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
+          color: '#fff', // Adjust color for contrast on the video background                
           height: '100%',
         }}
       >
-        navbar
+      <Box textAlign={'center'} padding={{xs:'2em',sm:'2em',md:'4em'}}>
+      <Box component='h1'>Make money with <Box component={'span'} color='#55CA83'> Linebet</Box></Box>        
         <br />
+        <Box component={'p'}>Become an affiliate, refer customers to the Linebet website and get up to 50% lifetime commission for your referrals</Box>
+
+      </Box>
       </Box>
         </Box>
     );
