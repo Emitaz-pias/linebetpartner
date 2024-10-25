@@ -3,7 +3,7 @@ import React from 'react';
 import firstScreenVideo from '../../images/first-screen-video.mp4';
 const TopSection = () => {
     return (
-        <Box border='1px solid red' sx={{position:'relative',height: { xs: '100vh', sm: '100vh', md: '50vh', lg: '50vh',},overflow:'hidden',borderRadius:{md:'2em'}}}>
+        <Box  sx={{position:'relative',height: { xs: '100vh', sm: '100vh', md: '50vh', lg: '50vh',},overflow:'hidden',borderRadius:{md:'2em'}}}>
           <Box
         component="video"
         autoPlay

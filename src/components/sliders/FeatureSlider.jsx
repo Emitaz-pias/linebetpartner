@@ -44,20 +44,23 @@ const FeatureSlider = () => {
   ];
 
   return (
-    <Box sx={{ mt: 4, px: 2 ,border:'1px solid red'}}>
+    <Box sx={{ mt:2, px:1 ,border:'1px solid red',padding:'5em'}}>
       <Slider {...settings}>
         {features.map((feature, index) => (
-          <Box key={index} sx={{
+          <Box key={index} 
+          sx={{
             background: feature.background,
             color: 'white',
-            padding: '20px',
+            padding:'1em',
+            margin:'0 10px ',
             borderRadius: '8px',
             textAlign: 'center',
+            border:'1px solid red',            
           }}>
-            <Typography variant="h5" fontWeight="bold">
+            <Typography className='sliderTitle'>
               {feature.title}
             </Typography>
-            <Typography variant="subtitle1">
+            <Typography className='sliderPara'>
               {feature.subtitle}
             </Typography>
           </Box>

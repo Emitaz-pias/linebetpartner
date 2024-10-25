@@ -8,7 +8,7 @@ const Homepage = () => {
     return (
         <Box>
             <TopSection />
-           
+           <FeatureSlider/>
         </Box>
     );
 };
