@@ -1,0 +1,21 @@
+.bYroLG::after {
+    content: "";
+    position: absolute;
+    bottom: -30.5rem;
+    left: calc(50% - 30.5rem);
+    width: 61rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: rgb(85, 202, 131);
+    transition: 0.3s;
+}
+.bYroLG::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: 1;
+}
