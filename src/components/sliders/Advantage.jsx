@@ -4,14 +4,12 @@ import { Box, Typography } from '@mui/material';
 import './Advantage.css';
 
 const AdvantagesSlider = () => {
-  const [circleSize, setCircleSize] = useState(0);
+  const [circleSize, setCircleSize] = useState(0); // Initial size for green background
   const sliderRef = useRef(null);
   const sectionRef = useRef(null);
-  const [ , setIsInView] = useState(false);
 
   const settings = {
-    dots: true,
-    infinite: true,
+    infinite:false,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -19,6 +17,9 @@ const AdvantagesSlider = () => {
       { breakpoint: 1024, settings: { slidesToShow: 3, slidesToScroll: 1 } },
       { breakpoint: 600, settings: { slidesToShow: 1, slidesToScroll: 1 } },
     ],
+    afterChange: (currentSlide) => {
+      setCircleSize(0+ currentSlide * 220); // Change circle size based on the slide index
+    }
   };
 
   const cardData = [
@@ -34,10 +35,8 @@ const AdvantagesSlider = () => {
     event.preventDefault();
     if (event.deltaY > 0) {
       sliderRef.current.slickNext();
-      setCircleSize((prev) => Math.min(prev + 50, 600)); // Increment size on scroll down
     } else {
       sliderRef.current.slickPrev();
-      setCircleSize((prev) => Math.max(prev - 50, 0)); // Decrement size on scroll up
     }
   };
 
@@ -47,40 +46,24 @@ const AdvantagesSlider = () => {
     return () => sliderElement.removeEventListener("wheel", handleWheel);
   }, []);
 
-  useEffect(() => {
-    // Detect if section is in view
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => setIsInView(entry.isIntersecting));
-      },
-      { threshold: 0.1 }
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-
-    // return () => {
-    //   if (sectionRef.current) observer.unobserve(sectionRef.current);
-    // };
-  }, []);
-
   return (
     <Box id="advantages" ref={sectionRef} className="bYroLG" sx={{ padding: '60px 0', position: 'relative', overflow: 'hidden' }}>
-      {/* Background Circle positioned behind the cards */}
       <div
-        className="background-circle"
-        style={{
-          width: `${circleSize}px`,
-          height: `${circleSize}px`,
-          position: 'absolute',
-          top: '80%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          backgroundColor: '#00C853',
-          borderRadius: '50%', // Full circle shape
-          clipPath: 'inset(00% 0 50% 0)', // Show only the top half
-          zIndex: -1,
-          transition: 'width 0.1s ease, height 0.1s ease',
-        }}
-      />
+  className="background-circle"
+  style={{
+    width: circleSize >= 600 ? '100%' : `${circleSize}px`, // Full width at max size
+    height: circleSize >= 600 ? '100%' : `${circleSize}px`, // Cover entire section at max size
+    position: 'absolute',
+    top: '80%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    backgroundColor: '#00C853',
+    borderRadius: circleSize >= 600 ? '0' : '50%', // Remove border-radius at max size
+    clipPath: circleSize >= 600 ? 'none' : 'inset(0% 0 50% 0)', // Remove half-circle at max size
+    zIndex: -1,
+    transition: 'width 0.3s ease, height 0.3s ease',
+  }}
+/>
 
       {/* Heading and Slider */}
       <Typography variant="h2" className="Heading" align="center">
