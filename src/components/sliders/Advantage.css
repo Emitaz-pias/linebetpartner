@@ -1,4 +1,4 @@
-.bYroLG::after {
+/* .bYroLG::after {
     content: "";
     position: absolute;
     bottom: -30.5rem;
@@ -18,4 +18,17 @@
     height: 100%;
     background-size: cover;
     z-index: 1;
+} */
+
+.background-circle {
+    position: absolute;
+    top: 19rem;
+    width: 61rem;
+    height: 30.5rem; /* Half of the width for a half-circle shape */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50% 50% 0 0; /* Top half circle */
+    background-color: rgb(85, 202, 131);
+    z-index: -10; /* Lower z-index to ensure it's always behind */
+    transition: width 0.3s ease, height 0.3s ease;
 }
