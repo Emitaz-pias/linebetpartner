@@ -20,7 +20,7 @@ import FAQ from '../../components/faq/FAQ';
 const Homepage = () => {
     return (
         <Box>
-            <TopSection />
+            <Box border='1px solid red' sx={{maxWidth:'90%', marginX:{md:'11em'}}}><TopSection/></Box> 
            <FeatureSlider/>
            <AdvantagesSlider/>
            {/* <OurProductSection/> */}
