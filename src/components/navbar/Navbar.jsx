@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import LogoDark from '../../images/logo-dark.png'
+import mobileLogo from '../../images/mobileLogo.png'
 import './Navbar.css'
 const Navbar = () => {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -72,33 +73,36 @@ const Navbar = () => {
     );
 
     return (
-        <Box sx={{ paddingX: { md:25 } }}>
-            <AppBar position="static" sx={{display:{md:'flex'},textTransform:'none' ,backgroundColor: 'transparent', boxShadow: 'none !important', color: 'black !important',}}>
+        <Box sx={{ paddingX: { md: 25 } }}>
+            <AppBar position="static" sx={{ display: { md: 'flex' }, textTransform: 'none', backgroundColor: 'transparent', boxShadow: 'none !important', color: 'black !important', }}>
                 <Toolbar>
                     {/* Logo Section */}
-                    <Typography component="div" sx={{flexGrow: 1 }}>
+                    <Typography component="div" sx={{ flexGrow: 1 }}>
                         <Link to="/" style={{ textDecoration: 'none', }}>
-                            <Box component={'img'} src={LogoDark} sx={{ width: '36%' }} alt='logoDark'></Box>
+                            <span>
+                                <Box component={'img'} src={LogoDark} sx={{ width: '36%', display: { sm: 'none', xs: 'none', md: 'block', lg: 'block' } }} alt='logoDark'></Box>
+                                <Box component={'img'} src={mobileLogo} sx={{ width: '36%', display: { sm: 'block', xs: 'block', lg: 'none', md: 'none' } }} alt='logoLight'></Box>
+                            </span>
                         </Link>
                     </Typography>
 
                     {/* Desktop Menu */}
-                    <Box sx={{ display: { xs: 'none', sm: 'none', lg: 'block', md: 'block', },position:{md:'relative'},right:{md:'5em'} }}>
+                    <Box sx={{ display: { xs: 'none', sm: 'none', lg: 'block', md: 'block', }, position: { md: 'relative' }, right: { md: '4em' } }}>
                         <Box><Button className="nav-button" component={Link} to="/what-we-offer">
                             What do we offer?
                         </Button>
-                        <Button className="nav-button" component={Link} to="/brochure">
-                            Brochure
-                        </Button>
-                        <Button className="nav-button" component={Link} to="/contacts">
-                            Contacts
-                        </Button>
-                        <Button className="nav-button" component={Link} to="/faq">
-                            FAQ
-                        </Button></Box>                      
+                            <Button className="nav-button" component={Link} to="/brochure">
+                                Brochure
+                            </Button>
+                            <Button className="nav-button" component={Link} to="/contacts">
+                                Contacts
+                            </Button>
+                            <Button className="nav-button" component={Link} to="/faq">
+                                FAQ
+                            </Button></Box>
                     </Box>
-                    <Box sx={{ display: { xs: 'none', sm: 'none', lg: 'block', md: 'block', }}} >
-                       <Button className="nav-button" component={Link} to="/faq">
+                    <Box sx={{ display: { xs: 'none', sm: 'none', lg: 'block', md: 'block', } }} >
+                        <Button className="nav-button" component={Link} to="/faq">
                             en ^
                         </Button>
                         <Button className="register-button" variant="contained" sx={{ backgroundColor: '#00b846' }} component={Link} to="/register">
@@ -107,15 +111,15 @@ const Navbar = () => {
                         <Button className="nav-button" component={Link} to="/login">
                             Login
                         </Button>
-                       </Box>                       
+                    </Box>
 
                     {/* Mobile Menu Icon */}
                     <IconButton
-                        color="inherit"
+
                         aria-label="open drawer"
                         edge="start"
                         onClick={handleDrawerToggle}
-                        sx={{ display: { md: 'none' } }}
+                        sx={{ color: 'white !important', display: { md: 'none' } }}
                     >
                         <MenuIcon />
                     </IconButton>

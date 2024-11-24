@@ -1,6 +1,7 @@
 import { Box } from '@mui/material';
 import React from 'react';
 import firstScreenVideo from '../../images/first-screen-video.mp4';
+import Navbar from '../../components/navbar/Navbar'
 const TopSection = () => {
     return (
         <Box  sx={{position:'relative',height: { xs: '100vh', sm: '100vh', md: '50vh', lg: '50vh',},overflow:'hidden',borderRadius:{md:'2em'}}}>
@@ -15,7 +16,7 @@ const TopSection = () => {
           top: 0,
           left: 0,
           objectFit:'cover',
-          width:'100%',
+          width:'100vw',
           height:{xs:'100vh', md:'100vh'},         
           zIndex: -1,                   
         }}
@@ -23,8 +24,10 @@ const TopSection = () => {
         <source src={firstScreenVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </Box>
-
-      {/* Navbar content */}
+<Box sx={{display:{lg:'none',md:'none'}}}>
+<Navbar />
+</Box>
+  
       <Box
         sx={{
           position: 'relative',

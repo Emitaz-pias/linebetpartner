@@ -29,7 +29,7 @@ const Homepage = () => {
            <AffiliateSteps/>
            <PartnersLocations/>
            <ScrollToTopButton/>
-           <ConferenceSlider/>
+           {/* <ConferenceSlider/> */}
            <AffiliateSection/>
            <RegistrationForm/>
            <Login/>
