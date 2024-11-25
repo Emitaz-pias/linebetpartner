@@ -9,18 +9,14 @@ import MarketingTools from '../../components/marketingTools/MarketingTools';
 import AffiliateSteps from '../../components/sliders/AffiliateSteps';
 import PartnersLocations from '../../components/partnersLocation/PartnersLocation';
 import ScrollToTopButton from '../../components/scrollToTop/ScrollToTop';
-import ConferenceSlider from '../../components/conferenceSlider/ConferenceSlider';
+// import ConferenceSlider from '../../components/conferenceSlider/ConferenceSlider';
 import AffiliateSection from '../../components/affiliateSection/AffiliateSection';
-import RegistrationForm from '../../components/registrationForm/RegistrationForm';
-import Login from '../../components/loginForm/LoginForm';
-import ContactsPage from '../contacts/ContactsPage';
-import FAQ from '../../components/faq/FAQ';
 
 
 const Homepage = () => {
     return (
         <Box>
-            <Box border='1px solid red' sx={{maxWidth:'90%', marginX:{md:'11em'}}}><TopSection/></Box> 
+            <Box sx={{ marginX:{md:'11em',sm:0,xs:0}}}><TopSection/></Box> 
            <FeatureSlider/>
            <AdvantagesSlider/>
            {/* <OurProductSection/> */}
@@ -31,10 +27,6 @@ const Homepage = () => {
            <ScrollToTopButton/>
            {/* <ConferenceSlider/> */}
            <AffiliateSection/>
-           <RegistrationForm/>
-           <Login/>
-           <ContactsPage/>
-           <FAQ/>
         </Box>
     );
 };

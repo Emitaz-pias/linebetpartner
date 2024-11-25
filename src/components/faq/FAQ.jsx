@@ -45,7 +45,7 @@ const FAQ = () => {
   ];
 
   return (
-    <Box sx={{ maxWidth: 1000, mx: 'auto', my: 4 }}>
+    <Box sx={{ maxWidth: 1000, mx: '1em', my: 4 }}>
       <Typography variant="h4" sx={{ mb: 3 }}>
         FAQs
       </Typography>
