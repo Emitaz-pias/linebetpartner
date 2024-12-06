@@ -43,8 +43,7 @@ const RegistrationForm = () => {
           display: 'flex',
         }}
       >
-        {/* Left Side Navigation */}
-        <Box
+        {/* <Box
           sx={{
             width: '30%',
             borderRight: '1px solid #e0e0e0',
@@ -55,7 +54,6 @@ const RegistrationForm = () => {
             Registration
           </Typography>
 
-          {/* Stepper List */}
           <List>
             {steps.map((step, index) => (
               <ListItem key={index} sx={{ mb: 2 }}>
@@ -93,12 +91,11 @@ const RegistrationForm = () => {
               Log in
             </Button>
           </Typography>
-        </Box>
+        </Box> */}
 
         {/* Right Side Form */}
         <Box sx={{ width: '70%', pl: 3 }}>
-          {/* Step Indicator */}
-          <Box display="flex" alignItems="center" gap={2} mb={4}>
+          {/* <Box display="flex" alignItems="center" gap={2} mb={4}>
             <Box
               sx={{
                 position: 'relative',
@@ -115,7 +112,6 @@ const RegistrationForm = () => {
               }}
             >
               {activeStep + 1}/3
-              {/* Progress Circle */}
               <Box
                 sx={{
                   position: 'absolute',
@@ -132,11 +128,11 @@ const RegistrationForm = () => {
             <Typography variant="h6" fontWeight="bold">
               Step {activeStep + 1}: Enter your contact information
             </Typography>
-          </Box>
-
+          </Box> */}
+{/* 
           <Typography variant="body2" color="textSecondary" mb={4}>
             *Fields marked with an asterisk are compulsory
-          </Typography>
+          </Typography> */}
 
           {/* Form Section */}
           <Grid container spacing={2}>
@@ -246,7 +242,7 @@ const RegistrationForm = () => {
                 },
               }}
             >
-              Continue
+              Submit
             </Button>
           </Box>
         </Box>
