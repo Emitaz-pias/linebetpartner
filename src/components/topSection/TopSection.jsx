@@ -53,7 +53,7 @@ const TopSection = () => {
               '&:hover': {
                 backgroundImage: 'linear-gradient(135deg, rgb(18, 125, 60) 0%, rgb(75, 180, 120) 46.88%)', // Hover effect
               },
-            }} >BECOME AN AFFILIATE</Button></Link>
+            }}  >BECOME AN AFFILIATE</Button></Link>
             <Link to='/sign-in'>
             <Button sx={{
               borderColor: 'rgb(20, 139, 67)', 

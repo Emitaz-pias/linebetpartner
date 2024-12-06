@@ -77,7 +77,7 @@ const AdvantagesSlider = () => {
           transition: 'width 0.3s ease, height 0.3s ease',
         }}
       />
-      <Grid container  className="CardList" border='1px solid red' sx={{ marginTop: 4 }}>
+      <Grid container  className="CardList" sx={{ marginTop: 4 }}>
        <Grid size={{sm:10,xs:10}}>
        <Slider ref={sliderRef} {...settings}>
           {cardData.map((card, index) => (

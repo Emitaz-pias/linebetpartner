@@ -6,22 +6,22 @@ import { ReactComponent as TelegramLogo } from '../../images/telegramLogo.svg';
 import { Box } from '@mui/material';
 
 const topBarData = [
-    {
-        image: TelegramLogo,
-        name: 'Linebet_Partners_bot',
-    },
-    {
-        image: LinkedIn,
-        name: 'Linebet',
-    },
+    // {
+    //     image: TelegramLogo,
+    //     name: 'Linebet_Partners_bot',
+    // },
+    // {
+    //     image: LinkedIn,
+    //     name: 'Linebet',
+    // },
     {
         image: Mail,
-        name: 'b2b@linebet.com',
+        name: 'manager@linebetagentship.com',
     },
-    {
-        image: AndroidImage,
-        name: 'Mobile_app_for_Android',
-    },
+    // {
+    //     image: AndroidImage,
+    //     name: 'Mobile_app_for_Android',
+    // },
 ];
 
 const TopLinkBar = () => {

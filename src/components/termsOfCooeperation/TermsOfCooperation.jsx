@@ -15,8 +15,7 @@ const TermsOfCooperation = () => {
     sx={{
       background: `url(${termnsBg}), linear-gradient(145deg, #00c9a7, #00c853)`,
       color: '#fff',
-      padding: '50px 20px',
-      border: '1px solid red',
+      padding: '50px 20px',    
       backgroundSize: 'contain',
       backgroundPosition: 'left bottom',
       backgroundRepeat: 'no-repeat'
@@ -41,9 +40,9 @@ const TermsOfCooperation = () => {
               
       </Box>
 
-      <Grid container spacing={4} justifyContent="center" border='1px solid red'>
+      <Grid container spacing={4} justifyContent="center" >
         {/* Left Section */}
-        <Grid border='1px solid green' size={{xs:12,md:6}}>
+        <Grid  size={{xs:12,md:6}}>
 
           <Box
             sx={{

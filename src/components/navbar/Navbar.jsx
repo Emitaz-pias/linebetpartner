@@ -58,11 +58,11 @@ const Navbar = () => {
                         <ListItemText primary="FAQ" />
                     </ListItemButton>
                 </ListItem>
-                <ListItem disablePadding>
+                {/* <ListItem disablePadding>
                     <ListItemButton component={Link} to="/sign-in">
                         <ListItemText primary="Login" />
                     </ListItemButton>
-                </ListItem>
+                </ListItem> */}
                 <ListItem disablePadding>
                     <ListItemButton component={Link} to="/sign-up">
                         <ListItemText primary="Register" />
@@ -108,9 +108,9 @@ const Navbar = () => {
                         <Button className="register-button" variant="contained" sx={{ backgroundColor: '#00b846' }} component={Link} to="/sign-up">
                             Register
                         </Button>
-                        <Button className="nav-button" component={Link} to="/sign-in">
+                        {/* <Button className="nav-button" component={Link} to="/sign-in">
                             Login
-                        </Button>
+                        </Button> */}
                     </Box>
 
                     {/* Mobile Menu Icon */}

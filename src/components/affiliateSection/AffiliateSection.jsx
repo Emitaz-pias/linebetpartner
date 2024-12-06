@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const AffiliateSection = () => {
   return (
@@ -18,11 +19,12 @@ const AffiliateSection = () => {
         Become an affiliate of{' '}
         <Typography
           component="span"
-          sx={{ color: 'green', fontWeight: 'bold' }}
+          sx={{ color: 'green', fontWeight: 'bold' ,fontSize:'1em'}}
         >
           Linebet
         </Typography>
       </Typography>
+      <Link  to="/sign-up" >
       <Button
         variant="contained"
         sx={{
@@ -36,9 +38,11 @@ const AffiliateSection = () => {
             backgroundColor: 'darkgreen',
           },
         }}
+       
       >
         Become an Affiliate
-      </Button>
+      </Button></Link>
+     
     </Box>
   );
 };
