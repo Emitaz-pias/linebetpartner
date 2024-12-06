@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography, Button, Select, MenuItem } from '@mui/material';
 import Grid from '@mui/material/Grid2';
+import termnsBg from '../../images/terms--coop-bg.png'
 
 const TermsOfCooperation = () => {
   const [country, setCountry] = React.useState('Bangladesh');
@@ -11,19 +12,20 @@ const TermsOfCooperation = () => {
 
   return (
     <Box
-      sx={{
-        background: 'linear-gradient(145deg, #00c9a7, #00c853)',
-        color: '#fff',
-        padding: '50px 20px',
-      }}
+    sx={{
+      background: `url(${termnsBg}), linear-gradient(145deg, #00c9a7, #00c853)`,
+      color: '#fff',
+      padding: '50px 20px',
+      border: '1px solid red',
+      backgroundSize: 'contain',
+      backgroundPosition: 'left bottom',
+      backgroundRepeat: 'no-repeat'
+  }}
     >
       {/* Section Title and Join Our Team Button */}
       <Box
         sx={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          marginBottom: '30px',
+         textAlign:'center'
         }}
       >
         <Typography
@@ -31,15 +33,17 @@ const TermsOfCooperation = () => {
           sx={{
             fontWeight: 'bold',
             fontSize: { xs: '24px', md: '36px' },
+           
           }}
         >
           Terms of Cooperation
-        </Typography>       
+        </Typography> 
+              
       </Box>
 
-      <Grid container spacing={4} justifyContent="center">
+      <Grid container spacing={4} justifyContent="center" border='1px solid red'>
         {/* Left Section */}
-        <Grid  size={{xs:12,md:6}}>
+        <Grid border='1px solid green' size={{xs:12,md:6}}>
 
           <Box
             sx={{
@@ -50,13 +54,11 @@ const TermsOfCooperation = () => {
               boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
             }}
           >
-            <Box sx={{display:'flex',justifyContent:'space-between'}}>
-            <Typography
-              variant="h6"
-              sx={{ fontWeight: 'bold', marginBottom: '10px' }}
-            >
+            <Box sx={{display:{md:'flex'},justifyContent:'space-between'}}>
+              <Typography variant='h6' fontWeight={'bold'}>
               Revenue Share
-            </Typography>
+              </Typography>
+            
             <Button
           variant="contained"
           sx={{
@@ -73,14 +75,17 @@ const TermsOfCooperation = () => {
           Join Our Team
         </Button>
             </Box>
-            <Typography variant="body2" sx={{ marginBottom: '20px' }}>
+            <Typography variant="p" sx={{ marginBottom: '20px' }}>
               Get a lifetime percentage of the net income from every customer
               you refer
             </Typography>
 
-            <Box              
+         <Box sx={{display:{md:'flex'},flexDirection:'row' }}>
+       <Grid spacing={1} margin='0.5em'  size={{md:8}}>
+       <Box              
             >
-              <Select
+              <Select 
+
                 value={country}
                 onChange={handleCountryChange}
                 variant="outlined"
@@ -88,6 +93,7 @@ const TermsOfCooperation = () => {
                   width: '50%',
                   borderRadius: '8px',
                   backgroundColor: '#f5f5f5',
+                  margin:'0.5em'
                 }}
               >
                 <MenuItem value="Bangladesh">Bangladesh</MenuItem>
@@ -114,9 +120,10 @@ const TermsOfCooperation = () => {
               </Typography>
             </Box>
             </Box>
+       </Grid>
 
             {/* Contact Us Section */}
-            <Box
+        <Grid>    <Box
               sx={{               
                 backgroundColor: '#F5F5F5',
                 padding: '20px',
@@ -148,12 +155,13 @@ const TermsOfCooperation = () => {
               >
                 Contact Us
               </Button>
-            </Box>
+            </Box></Grid>
+         </Box>
           </Box>
         </Grid>
 
         {/* Right Section */}
-        <Grid size={{xs:12,md:6}}>
+        <Grid margin='0.5em'size={{xs:12,md:6}}>
           <Grid container spacing={2}>
             {/* CPA Card */}
             <Grid size={{xs:12,md:6}}>

@@ -3,7 +3,7 @@ import TopSection from '../../components/topSection/TopSection';
 import { Box } from '@mui/material';
 import FeatureSlider from '../../components/sliders/FeatureSlider';
 import AdvantagesSlider from '../../components/sliders/Advantage';
-// import OurProductSection from '../../components/ourProducts/OurProducts'
+import OurProductSection from '../../components/ourProducts/OurProducts'    
 import TermsOfCooperation from '../../components/termsOfCooeperation/TermsOfCooperation';
 import MarketingTools from '../../components/marketingTools/MarketingTools';
 import AffiliateSteps from '../../components/sliders/AffiliateSteps';
@@ -19,7 +19,7 @@ const Homepage = () => {
             <Box sx={{ marginX:{md:'11em',sm:0,xs:0}}}><TopSection/></Box> 
            <FeatureSlider/>
            <AdvantagesSlider/>
-           {/* <OurProductSection/> */}
+           <OurProductSection/>
            <TermsOfCooperation/>
            <MarketingTools/>
            <AffiliateSteps/>

@@ -130,7 +130,7 @@ const SampleNextArrow = (props) => {
     <Box
      component={'div'}     
       sx={{
-        display: { sm: 'block flex', xs: 'block flex', md: 'block', lg: 'block' },      
+        display: { sm: 'block flex', xs: 'block flex', md: 'none', lg: 'none' },      
         position: 'absolute', // Ensure it's positioned properly
         right: '15px',
         top: '-55px',       
@@ -158,7 +158,7 @@ const SamplePrevArrow = (props) => {
     component={'div'}
       
       sx={{
-        display: { sm: 'block flex', xs: 'block flex', md: 'block', lg: 'block'},
+        display: { sm: 'block flex', xs: 'block flex', md: 'none', lg: 'none'},
         position: 'absolute', // Ensure it's positioned properly
         left: '65vw',
         top: '-55px',

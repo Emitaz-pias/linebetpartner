@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-
+import geo from '../../images/geo.png'
 const PartnersLocations = () => {
   return (
     <Box
@@ -32,10 +32,10 @@ const PartnersLocations = () => {
       {/* Map Image */}
       <Box
         component="img"
-        src="https://via.placeholder.com/1200x500.png?text=World+Map" // Replace with your actual map image URL
+        src={geo} // Replace with your actual map image URL
         alt="World Map"
         sx={{
-          maxWidth: '100%',
+          width: {md:"43%",xs:'100%',sm:'100%'},
           height: 'auto',
           margin: '0 auto',
         }}

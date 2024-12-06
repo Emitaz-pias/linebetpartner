@@ -1,6 +1,13 @@
 import React from 'react';
 import Slider from 'react-slick';
 import { Box, Typography } from '@mui/material';
+import icon1 from '../../images/icon1.png';
+import icon2 from '../../images/icon2.png';
+import icon3 from '../../images/icon3.png';
+import icon4 from '../../images/icon4.png';
+import icon5 from '../../images/icon5.png';
+import icon6 from '../../images/icon6.png';
+
 
 const AffiliateSteps = () => {
   // Steps data (updated to six cards)
@@ -9,41 +16,41 @@ const AffiliateSteps = () => {
       id: 1,
       title: 'Sign up for the affiliate program',
       description: '',
-      imgSrc: 'https://via.placeholder.com/100x100.png?text=1',
+      imgSrc: icon1,
     },
     {
       id: 2,
       title: 'Receive a confirmation email',
       description:
         '*The email will arrive within 48 hours of your application being submitted.',
-      imgSrc: 'https://via.placeholder.com/100x100.png?text=2',
+      imgSrc: icon2,
     },
     {
       id: 3,
       title: 'Contact your personal manager',
       description: 'Use the details mentioned in the email to get in touch.',
-      imgSrc: 'https://via.placeholder.com/100x100.png?text=3',
+      imgSrc: icon3,
     },
     {
       id: 4,
       title: 'Start earning!',
       description:
         'Get recommendations from our managers and begin earning effectively.',
-      imgSrc: 'https://via.placeholder.com/100x100.png?text=4',
+      imgSrc: icon4,
     },
     {
       id: 5,
       title: 'Optimize your campaigns',
       description:
         'Work with your manager to improve campaign performance over time.',
-      imgSrc: 'https://via.placeholder.com/100x100.png?text=5',
+      imgSrc: icon5,
     },
     {
       id: 6,
       title: 'Reap the rewards',
       description:
         'Enjoy ongoing commissions as your campaigns succeed.',
-      imgSrc: 'https://via.placeholder.com/100x100.png?text=6',
+      imgSrc: icon6,
     },
   ];
 
@@ -82,7 +89,7 @@ const AffiliateSteps = () => {
   };
 
   return (
-    <Box sx={{ padding: '40px 20px',marginLeft:'1em', textAlign: 'center' }}>
+    <Box sx={{ padding: '40px 20px', marginLeft: '1em', textAlign: 'center' }}>
       {/* Title */}
       <Typography
         variant="h4"
@@ -94,64 +101,63 @@ const AffiliateSteps = () => {
       {/* Slider */}
       <Slider {...settings}>
         {steps.map((step) => (
-          <Box
+         <Box sx={{padding:'10px'}}>
+           <Box
             key={step.id}
             sx={{
               padding: '20px',
               background: '#ffffff',
-              border: '1px solid #e0e0e0',
+              boxShadow:'gray 0.1em 0.1em 0.1em ',
               borderRadius: '10px',
-              margin: '10px',
-              textAlign: 'center',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
+              textAlign: 'center', 
+              margin:'10px'
+
             }}
           >
-            {/* Step Icon */}
+            <Box sx={{display:{md:'flex'}, padding: '20px',}}>
+            <Box  sx={{textAlign:'center'}}>
+              {/* Step Number */}
+              <Box
+                sx={{
+                  backgroundColor: '#ECF6F0',
+                  color: '#00c853',
+                  width: '2.5em',
+                  height: '2.5em',
+                  borderRadius: '10%',                
+                  fontSize: '18px',
+                  marginBottom: '10px',
+                 display:'flex',
+                 alignItems:'center',
+                 justifyContent:'center'
+                }}
+              >
+                {step.id}
+              </Box>
+
+              {/* Step Title */}
+              <Typography
+                variant="p"
+              sx={{textAlign:'start'}}
+              >
+                {step.title}
+              </Typography></Box>
+            {/* Step image */}
             <Box
+          
               component="img"
               src={step.imgSrc}
-              alt={`Step ${step.id}`}
+              alt={`altext ${step.id}`}
               sx={{
-                width: '80px',
-                height: '80px',
+                width: "50%",
+                height: '50%',
                 marginBottom: '20px',
                 objectFit: 'contain',
               }}
-            />
-
-            {/* Step Number */}
-            <Box
-              sx={{
-                backgroundColor: '#00C853',
-                color: '#fff',
-                width: '40px',
-                height: '40px',
-                borderRadius: '50%',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                fontSize: '18px',
-                marginBottom: '10px',
-              }}
-            >
-              {step.id}
-            </Box>
-
-            {/* Step Title */}
-            <Typography
-              variant="h6"
-              sx={{ fontWeight: 'bold', marginBottom: '10px' }}
-            >
-              {step.title}
-            </Typography>
-
-            {/* Step Description */}
-            <Typography variant="body2" sx={{ color: '#757575' }}>
-              {step.description}
-            </Typography>
+            />      
+              </Box>     
           </Box>
+         </Box>
+
         ))}
       </Slider>
     </Box>

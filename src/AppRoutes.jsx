@@ -17,11 +17,6 @@ const AppRoutes = () => {
                 <Route path="/sign-in" element={<Layout><Login/></Layout>} />
                 <Route path="/contacts" element={<Layout><ContactsPage/></Layout>} />
                 <Route path="/faq" element={<Layout><FAQ/></Layout>} />
-
-               
-
-                
-
             </Routes>
         </Router>
     );

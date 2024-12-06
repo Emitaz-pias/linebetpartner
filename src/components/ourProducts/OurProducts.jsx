@@ -1,28 +1,41 @@
 import React from 'react';
 import { Box, Typography, Card, CardContent } from '@mui/material';
 import Grid from '@mui/material/Grid2';
+import ProductsCards from '../../images/products-cards.png'
+import ProductsController from '../../images/products-controller.png'
+import ProductsCyberPort from '../../images/products-cyber-sport.png'
+import ProductsFootball from '../../images/products-football.png'
+import ProductsGamepad from '../../images/products-gamepad.png'
+import ProductsGames from '../../images/products-games.png'
+import ProductsOnlineCasino from '../../images/products-online-casino.png'
+import ProductsSport from '../../images/products-sport.png'
+
 
 
 const products = [
   {
-    image: 'assets/sport.png',
+    image: ProductsFootball ,
     title: 'Sport',
     description: 'Over 182 sports events and 5,500 markets. Live sports streams using unique technology.',
+    bgImage:ProductsSport
   },
   {
-    image: 'assets/esports.png',
+    image: ProductsGamepad,
     title: 'Esports',
     description: 'Over 600 pre-match and 350 live events per week. Innovative betting markets.',
+    bgImage:ProductsCyberPort
   },
   {
-    image: 'assets/online-casino.png',
+    image:ProductsCards ,
     title: 'Online casino',
     description: '12 popular online casino providers, low minimum stakes.',
+    bgImage:ProductsOnlineCasino
   },
   {
-    image: 'assets/games.png',
+    image: ProductsController,
     title: 'Games',
     description: 'Over 80 unique games powered by software developed in-house.',
+    bgImage:ProductsGames
   },
 ];
 
@@ -46,11 +59,13 @@ const OurProductSection = () => {
             <Card
               sx={{
                 maxWidth: 300,
-                width:{md:'100%',xs:'90%'},
+                width:{md:'100%',xs:'90%'},                
                 borderRadius: '16px',
-                background: 'linear-gradient(145deg, #00c9a7, #00c853)',
+                background: `url(${product.bgImage}),linear-gradient(145deg, #00c9a7, #00c853)`,
+                backgroundRepeat:'no-repeat',
+                backgroundSize:'cover',
                 color: '#fff',
-                padding: '5px',
+                padding: '0.5em',
               }}
             >
               <CardContent sx={{ textAlign: 'center' }}>
