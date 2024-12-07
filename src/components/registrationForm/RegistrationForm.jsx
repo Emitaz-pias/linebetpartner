@@ -64,7 +64,18 @@ const RegistrationForm = () => {
         p: 2,
       }}
     >
-      <Box
+    {success?<Box>
+        <Typography sx={{
+          backgroundColor: 'white',
+          padding: '2em',
+          borderRadius: '0.4em',
+          boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
+          width: { xs: '100vw', md: '40vw' }
+        }} variant='p' color='success'>
+        Your submission was successful.
+        </Typography>
+        <Typography  marginLeft='2em' color='success'>Sit back and relax!</Typography>
+      </Box> :(  <Box
         sx={{
           backgroundColor: 'white',
           width: '90%',
@@ -76,6 +87,7 @@ const RegistrationForm = () => {
         }}
       >
         <Box sx={{ width: '70%', pl: 3 }}>
+          <Box component={'h3'} textAlign='center'>Submit Your Application</Box>
           <form onSubmit={handleSubmit(onSubmit)}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
@@ -200,7 +212,7 @@ const RegistrationForm = () => {
             </Box>
           </form>
         </Box>
-      </Box>
+      </Box>)}
     </Box>
   );
 };
