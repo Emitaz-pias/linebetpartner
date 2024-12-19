@@ -32,7 +32,7 @@ const Footer = () => {
             <Link href="#" underline="hover" color="inherit">
               Brochure
             </Link>
-            <Link href="#" underline="hover" color="inherit">
+            <Link href="/contacts" underline="hover" color="inherit">
               Contacts
             </Link>
             <Link href="#" underline="hover" color="inherit">

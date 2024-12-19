@@ -6,6 +6,7 @@ import RegistrationForm from './components/registrationForm/RegistrationForm';
 import Login from './components/loginForm/LoginForm';
 import ContactsPage from './pages/contacts/ContactsPage';
 import FAQ from './components/faq/FAQ';
+import PaymentPage from './pages/payment/PaymentPage';
 
 const AppRoutes = () => {
     return (
@@ -17,6 +18,8 @@ const AppRoutes = () => {
                 <Route path="/sign-in" element={<Layout><Login/></Layout>} />
                 <Route path="/contacts" element={<Layout><ContactsPage/></Layout>} />
                 <Route path="/faq" element={<Layout><FAQ/></Layout>} />
+                <Route path="/payment" element={<Layout><PaymentPage/></Layout>} />
+
             </Routes>
         </Router>
     );

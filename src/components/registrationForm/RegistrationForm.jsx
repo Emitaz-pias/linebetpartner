@@ -18,7 +18,7 @@ const RegistrationForm = () => {
 
   const createSheetData = (data) => {
     console.log(data)
-    fetch('https://sheetdb.io/api/v1/jyj8dqbcyv126', {
+    fetch('https://sheetdb.io/api/v1/mb4ihvbzr8i5d', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',

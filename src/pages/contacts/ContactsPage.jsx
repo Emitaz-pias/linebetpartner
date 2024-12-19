@@ -4,20 +4,20 @@ import { Telegram, Email, Instagram, LinkedIn,  } from '@mui/icons-material';
 
 const ContactsPage = () => {
   const contacts = [
-    {
-      icon: <Telegram color="success" />,
-      title: 'Telegram',
-      detail: '@Linebet_Partners_bot',
-    },
+    // {
+    //   icon: <Telegram color="success" />,
+    //   title: 'Telegram',
+    //   detail: '@Linebet_Partners_bot',
+    // },
     {
       icon: <Email color="success" />,
       title: 'Email',
-      detail: 'b2b@linebet.com',
+      detail: 'manager@linebetagentship.com',
     },
     {
       icon: <Instagram color="success" />,
       title: 'Instagram',
-      detail: '@linebet.partners',
+      detail: '@linebet.agentship',
     },
     {
       icon: <LinkedIn color="success" />,
@@ -27,7 +27,7 @@ const ContactsPage = () => {
     {
       icon: <Email color="success" />,
       title: 'Skype',
-      detail: 'partners@linebet.com',
+      detail: 'manager@linebetagentship.com',
     },
   ];
 
