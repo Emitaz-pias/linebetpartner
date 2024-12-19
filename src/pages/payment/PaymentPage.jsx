@@ -57,10 +57,32 @@ const PaymentPage = () => {
   };
 
   const handleCopyAddress = () => {
-    navigator.clipboard.writeText(selectedAddress);
-    alert("Address copied to clipboard!");
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(selectedAddress)
+        .then(() => {
+          alert("Address copied to clipboard!");
+        })
+        .catch((err) => {
+          alert("Failed to copy address. Please copy it manually.");
+          console.error("Clipboard error:", err);
+        });
+    } else {
+      // Fallback for browsers where clipboard API is not available
+      const textarea = document.createElement("textarea");
+      textarea.value = selectedAddress;
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand("copy");
+        alert("Address copied to clipboard!");
+      } catch (err) {
+        alert("Failed to copy address. Please copy it manually.");
+        console.error("Fallback clipboard error:", err);
+      }
+      document.body.removeChild(textarea);
+    }
   };
-
+  
   return (
     <Container height="80vh">
       <PaymentNavbar />
@@ -141,7 +163,7 @@ const PaymentPage = () => {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            width: 400,
+            width:'80vw',
             bgcolor: "background.paper",
             boxShadow: 24,
             p: 4,
@@ -151,12 +173,12 @@ const PaymentPage = () => {
           <Typography
             id="payment-modal-title"
             variant="h6"
-            component="h2"
+            component="h5"
             gutterBottom
           >
             Payment Address
           </Typography>
-          <Typography id="payment-modal-description" sx={{ mb: 2 }}>
+          <Typography id="payment-modal-description" sx={{}}>
             {selectedAddress}
             <IconButton onClick={handleCopyAddress}>
               <ContentCopyIcon />
