@@ -10,6 +10,7 @@ const PaymentNavbar = () => {
         backgroundColor: "white",
         boxShadow: "none",
         borderBottom: "1px solid #ddd",
+        display:{xs:'block',sm:'none', md:'none'}
       }}
     >
       <Toolbar

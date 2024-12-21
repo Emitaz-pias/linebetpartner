@@ -95,9 +95,57 @@ const TermsOfCooperation = () => {
                   margin:'0.5em'
                 }}
               >
-                <MenuItem value="Bangladesh">Bangladesh</MenuItem>
-                <MenuItem value="India">India</MenuItem>
-                <MenuItem value="USA">USA</MenuItem>
+               <MenuItem value="Afghanistan">Afghanistan</MenuItem>
+<MenuItem value="Algeria">Algeria</MenuItem>
+<MenuItem value="Argentina">Argentina</MenuItem>
+<MenuItem value="Australia">Australia</MenuItem>
+<MenuItem value="Austria">Austria</MenuItem>
+<MenuItem value="Bangladesh">Bangladesh</MenuItem>
+<MenuItem value="Belgium">Belgium</MenuItem>
+<MenuItem value="Brazil">Brazil</MenuItem>
+<MenuItem value="Canada">Canada</MenuItem>
+<MenuItem value="Chile">Chile</MenuItem>
+<MenuItem value="China">China</MenuItem>
+<MenuItem value="Colombia">Colombia</MenuItem>
+<MenuItem value="Denmark">Denmark</MenuItem>
+<MenuItem value="Egypt">Egypt</MenuItem>
+<MenuItem value="Finland">Finland</MenuItem>
+<MenuItem value="France">France</MenuItem>
+<MenuItem value="Germany">Germany</MenuItem>
+<MenuItem value="Greece">Greece</MenuItem>
+<MenuItem value="India">India</MenuItem>
+<MenuItem value="Indonesia">Indonesia</MenuItem>
+<MenuItem value="Iran">Iran</MenuItem>
+<MenuItem value="Iraq">Iraq</MenuItem>
+<MenuItem value="Italy">Italy</MenuItem>
+<MenuItem value="Japan">Japan</MenuItem>
+<MenuItem value="Kenya">Kenya</MenuItem>
+<MenuItem value="Malaysia">Malaysia</MenuItem>
+<MenuItem value="Mexico">Mexico</MenuItem>
+<MenuItem value="Morocco">Morocco</MenuItem>
+<MenuItem value="Netherlands">Netherlands</MenuItem>
+<MenuItem value="New Zealand">New Zealand</MenuItem>
+<MenuItem value="Nigeria">Nigeria</MenuItem>
+<MenuItem value="Norway">Norway</MenuItem>
+<MenuItem value="Pakistan">Pakistan</MenuItem>
+<MenuItem value="Philippines">Philippines</MenuItem>
+<MenuItem value="Poland">Poland</MenuItem>
+<MenuItem value="Portugal">Portugal</MenuItem>
+<MenuItem value="Russia">Russia</MenuItem>
+<MenuItem value="Saudi Arabia">Saudi Arabia</MenuItem>
+<MenuItem value="South Africa">South Africa</MenuItem>
+<MenuItem value="South Korea">South Korea</MenuItem>
+<MenuItem value="Spain">Spain</MenuItem>
+<MenuItem value="Sweden">Sweden</MenuItem>
+<MenuItem value="Switzerland">Switzerland</MenuItem>
+<MenuItem value="Thailand">Thailand</MenuItem>
+<MenuItem value="Turkey">Turkey</MenuItem>
+<MenuItem value="United Arab Emirates">United Arab Emirates</MenuItem>
+<MenuItem value="United Kingdom">United Kingdom</MenuItem>
+<MenuItem value="USA">USA</MenuItem>
+<MenuItem value="Vietnam">Vietnam</MenuItem>
+<MenuItem value="Zimbabwe">Zimbabwe</MenuItem>
+
               </Select>
               <Box>
                 
@@ -115,7 +163,7 @@ const TermsOfCooperation = () => {
                 variant="h4"
                 sx={{ fontWeight: 'bold', color: '#00C853' }}
               >
-                From 25%
+                From 8%
               </Typography>
             </Box>
             </Box>

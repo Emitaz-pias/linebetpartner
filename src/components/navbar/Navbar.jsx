@@ -27,7 +27,7 @@ const Navbar = () => {
                 {/* Logo */}
                 <Typography >
                     <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-                        <Box component={'img'} src={LogoDark} alt='logoDark' sx={{ width: '50%' }}></Box>
+                        <Box component={'img'} src={LogoDark} alt='logoDark' sx={{ width: '45%' }}></Box>
                     </Link>
                 </Typography>
                 {/* Close Button */}

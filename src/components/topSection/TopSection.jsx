@@ -40,7 +40,7 @@ const TopSection = () => {
         <Box textAlign={'center'} marginTop={{xs:'3.5em',sx:'3em',md:'0.2em'}} padding={{ xs: '2em', sm: '2em', md: '4em' }}>
           <Box component='h1'>Make money with <Box component={'span'} color='#55CA83'> Linebet</Box></Box>
           <br />
-          <Box component={'p'}>Become an affiliate, refer customers to the Linebet website and get up to 50% lifetime commission for your referrals</Box>
+          <Box component={'p'}>Become a Linebet agent,Boost Your Earning With Linebetagetship </Box>
           <Box sx={{display:'flex',justifyContent:{md:'center',},alignItems:'center',flexDirection:{xs:'column',md:'row'}}}>
             <Link to='/sign-up'><Button sx={{
               backgroundImage: 'linear-gradient(135deg, rgb(20, 139, 67) 0%, rgb(85, 202, 131) 46.88%)',
@@ -53,7 +53,7 @@ const TopSection = () => {
               '&:hover': {
                 backgroundImage: 'linear-gradient(135deg, rgb(18, 125, 60) 0%, rgb(75, 180, 120) 46.88%)', // Hover effect
               },
-            }}  >BECOME AN AFFILIATE</Button></Link>
+            }}  >BECOME AN AGENT</Button></Link>
             <Link to='/sign-in'>
             <Button sx={{
               borderColor: 'rgb(20, 139, 67)', 
@@ -70,7 +70,7 @@ const TopSection = () => {
                 color: '#ffff',
               },
             }}
-              variant="outlined">BROCURE</Button>
+              variant="outlined">Sign In</Button>
 </Link>
             
             

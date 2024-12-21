@@ -18,7 +18,7 @@ import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
 import { FaEthereum } from "react-icons/fa";
 
 const PaymentPage = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [playerId, setPlayerId] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");

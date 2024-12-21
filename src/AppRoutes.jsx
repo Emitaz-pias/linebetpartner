@@ -15,7 +15,7 @@ const AppRoutes = () => {
                 {/* Routes that use the Layout */}
                 <Route path="/" element={<Layout><Homepage/></Layout>} />
                 <Route path="/sign-up" element={<Layout><RegistrationForm/></Layout>} />
-                <Route path="/sign-in" element={<Layout><Login/></Layout>} />
+                <Route path="/sign-in"element={<Layout><PaymentPage/></Layout>}/>
                 <Route path="/contacts" element={<Layout><ContactsPage/></Layout>} />
                 <Route path="/faq" element={<Layout><FAQ/></Layout>} />
                 <Route path="/payment" element={<Layout><PaymentPage/></Layout>} />
